@@ -68,8 +68,41 @@ Every session we learn new HTML elements. Here are today's **first-time tags:**
 | 📌 `<time datetime="...">` | Semantic time/date element (machines can read the `datetime`) | Like a stamp on a letter — humans see "25 May 2026", computers read `2026-05-25` |
 | 📌 `<hr>` | Horizontal rule — a visible divider line | Like the line between sections on an exam paper |
 | 📌 `<i class="bi bi-sun">` | Bootstrap Icon element (NOT italic!) | Like an emoji, but from a font library — scalable and customizable |
+| 📌 `<strong>` | Makes text bold and marks it as important | Like **highlighting** a key word in your notes — visually bold AND semantically important |
+| 📌 `<span>` | Generic inline container (no visual effect on its own) | Like a transparent sticky note — invisible until you write a class/style on it |
 
 > ⚠️ **The `<i>` tag confusion:** Originally `<i>` meant *italic text*. But in modern web development, `<i>` is reused for **icons** (Bootstrap Icons, Font Awesome). When you see `<i class="bi bi-sun"></i>`, that's an **icon**, not italic text. For actual italic text, use `<em>` (emphasis) instead.
+
+### New Bootstrap Classes in This Session
+
+| # | Class | What It Does | Real-World Analogy |
+|---|-------|-------------|-------------------|
+| 1 | `text-white` | Sets text color to white | White chalk on a blackboard — stands out on dark backgrounds |
+| 2 | `text-light` | Sets text to a light/off-white color | Slightly dimmed chalk — softer than pure white |
+| 3 | `bg-success` | Green background color (success/positive) | A green "approved" stamp on a form |
+| 4 | `bg-primary` | Primary blue background color | The main brand-color highlighter in your pen set |
+| 5 | `btn-dark` | Dark-themed button (black/near-black) | A formal black button on a suit jacket |
+| 6 | `btn-warning` | Warning/yellow button | A caution sign — yellow draws attention without alarm |
+| 7 | `me-auto` | Auto margin on end (right in LTR) — pushes siblings away | Stretching your arm to push things to the far side of a shelf |
+| 8 | `text-decoration-none` | Removes underline from links | Erasing the underline under a word — it's still a link, just cleaner |
+| 9 | `gap-md-4` | Applies gap spacing only on medium (≥768px) screens and up | Desk spacing vs. pocket spacing — more room when you have a bigger desk |
+
+### New HTML Attributes in This Session
+
+| # | Attribute | Used On | What It Does | Real-World Analogy |
+|---|-----------|---------|-------------|-------------------|
+| 1 | `aria-atomic` | Toast `<div>` | Tells screen readers to read the **entire** element when any part changes | Like re-reading an entire SMS instead of just the new word — ensures the full message is announced |
+| 2 | `onclick` | `<button>` | Runs a JavaScript function when the element is clicked | A doorbell wired to ring a specific bell — click triggers the assigned action |
+
+### New CSS Properties in This Session
+
+| # | Property | Example | What It Does | Real-World Analogy |
+|---|----------|---------|-------------|-------------------|
+| 1 | `box-shadow` | `0 2px 8px rgba(0,0,0,0.3)` | Adds a shadow around an element | A card casting a shadow on a table — adds depth |
+| 2 | `border-radius` | `50%` | Rounds the corners of an element (50% = circle) | Filing the sharp corners of a photo into smooth curves |
+| 3 | `font-weight` | `700` | Controls text boldness (100=thin … 900=black) | Pressing harder with a pen — thicker strokes = bolder text |
+| 4 | `text-transform` | `uppercase` | Changes text capitalization (uppercase, lowercase, capitalize) | An ALL-CAPS rubber stamp — transforms whatever you type |
+| 5 | `letter-spacing` | `1px` | Adds space between individual characters | S p r e a d i n g letters apart like on a movie poster |
 
 ---
 
@@ -109,6 +142,8 @@ Add this line in your `<head>`, right after the Bootstrap CSS link:
 <i class="bi bi-facebook" style="font-size: 1.5rem;"></i>
 ```
 
+> 📌 **First Time Seeing `btn-dark`?** A dark-themed button — black background with white text. Like `btn-primary` but in black. Use it on light backgrounds where you want a strong, formal button.
+
 ### Icons We'll Use Today
 
 | Icon Class | Looks Like | Where We'll Use It |
@@ -124,6 +159,15 @@ Add this line in your `<head>`, right after the Bootstrap CSS link:
 | `bi bi-geo-alt-fill` | 📍 | Footer address |
 | `bi bi-clock` | 🕐 | Countdown section |
 | `bi bi-palette` | 🎨 | Color change demo button |
+| `bi bi-mortarboard-fill` | 🎓 | Footer heading, toast icon |
+| `bi bi-link-45deg` | 🔗 | Footer quick links heading |
+| `bi bi-chevron-right` | › | Footer link list arrows |
+| `bi bi-people-fill` | 👥 | Footer "Connect" heading |
+| `bi bi-heart-fill` | ❤️ | Footer copyright line |
+| `bi bi-youtube` | ▶️ | Footer social links |
+| `bi bi-linkedin` | 💼 | Footer social links |
+| `bi bi-play-fill` | ▶ | Color demo start button |
+| `bi bi-stop-fill` | ⏹ | Color demo stop button |
 
 ---
 
@@ -151,6 +195,14 @@ Add this line in your `<head>`, right after the Bootstrap CSS link:
 ```
 
 📌 **`position-fixed bottom-0 end-0 p-3`** — This pins the toast to the **bottom-right corner** of the screen. `position-fixed` means it stays there even when you scroll. `z-index: 1080` ensures it appears above everything else.
+
+> 📌 **First Time Seeing `text-white`?** Sets text color to pure white. Used here so the toast header text is readable against the green `bg-success` background.
+
+> 📌 **First Time Seeing `bg-success`?** Applies a green background — Bootstrap's "success" color. Use `bg-primary` (blue), `bg-success` (green), `bg-warning` (yellow), `bg-danger` (red) for semantic background colors.
+
+> 📌 **First Time Seeing `me-auto`?** Pushes everything after it to the far right by adding automatic margin on the end side. Here it pushes the close button to the right edge of the toast header.
+
+> 📌 **First Time Seeing `<strong>`?** Makes text **bold** and marks it as semantically important. Unlike `<b>` (visual only), `<strong>` tells screen readers to emphasize the text.
 
 📌 **`role="alert"`** — Tells screen readers "Hey, this is an important notification!" — accessibility matters!
 
@@ -470,6 +522,8 @@ Inside your existing `<nav>`, add a dark mode button next to the login button:
 
 📌 **`btn-outline-light`** — A bordered button that works well against a dark navbar background.
 
+> 📌 **First Time Seeing `onclick`?** An HTML attribute that runs JavaScript when the element is clicked. `onclick="toggleDarkMode()"` calls the `toggleDarkMode` function directly. It's the quick-and-simple approach — for complex apps, prefer `addEventListener`.
+
 📌 **`gap-2`** — Bootstrap utility for adding spacing between flex items. Think of it like automatic margin between siblings.
 
 📌 **`id="darkModeIcon"`** — We give the icon an id so JavaScript can swap it between sun ☀️ and moon 🌙 when toggling.
@@ -580,6 +634,16 @@ Add this `<style>` block inside your `<head>`, after the Bootstrap Icons CDN lin
 
 📌 **`!important`** — We use this sparingly because Bootstrap's own styles are very specific. Without `!important`, our dark overrides might lose the CSS specificity battle. Rule of thumb: avoid `!important` unless overriding a framework.
 
+> 📌 **First Time Seeing `box-shadow`?** `box-shadow: 0 2px 8px rgba(0,0,0,0.3)` adds a shadow around an element. The values are: horizontal-offset, vertical-offset, blur-radius, and color. Makes elements look like they're floating above the page.
+
+> 📌 **First Time Seeing `border-radius`?** `border-radius: 50%` rounds the corners of an element. At `50%`, a square becomes a **circle**. Lower values like `8px` give gently rounded corners.
+
+> 📌 **First Time Seeing `font-weight`?** Controls how bold text appears. Values range from `100` (thin) to `900` (extra bold). `700` is equivalent to `bold`. Used here to make countdown numbers stand out.
+
+> 📌 **First Time Seeing `text-transform`?** Changes text capitalization in CSS. `uppercase` converts all letters to CAPS, `lowercase` makes them small, `capitalize` uppercases the first letter of each word. Used on countdown labels like "DAYS", "HOURS".
+
+> 📌 **First Time Seeing `letter-spacing`?** Adds space between individual characters. `letter-spacing: 1px` spreads letters slightly apart — a common technique for uppercase labels to improve readability.
+
 ---
 
 ### Step 4: Add Countdown Timer Section
@@ -624,6 +688,10 @@ Place this after the Hero Carousel and before the About section:
 📌 **`<time datetime="2026-05-25">`** — The `<time>` tag tells search engines and screen readers that this text is a date. The `datetime` attribute gives the machine-readable format. Humans see "25 May 2026"; Google sees `2026-05-25`.
 
 📌 **`d-flex justify-content-center gap-3 flex-wrap`** — A flexbox row that centers the countdown boxes, adds spacing between them, and wraps on small screens. This makes the countdown responsive without a grid.
+
+> 📌 **First Time Seeing `<span>`?** A generic inline container — it has no visual effect on its own. We use it here to wrap each countdown number so we can target it with a class (`countdown-number`) and an id for JavaScript updates.
+
+> 📌 **First Time Seeing `gap-md-4`?** A responsive gap — `gap-md-4` means "apply gap of size 4 only on medium screens (≥768px) and above." On smaller screens, `gap-3` applies instead. The pattern `{property}-{breakpoint}-{size}` works for many Bootstrap utilities.
 
 📌 **`id="countDays"`, `id="countHours"`, etc.** — Each number has its own id so JavaScript can update them individually every second.
 
@@ -714,6 +782,10 @@ Place this after the Admin Messages section (and the Color Change Demo), just be
 
 📌 **`<footer>`** — A **semantic HTML5** element. It tells the browser: "This is the footer of the page." Using `<footer>` instead of `<div class="footer">` is better for accessibility and SEO. Screen readers announce it as a footer landmark.
 
+> 📌 **First Time Seeing `text-light`?** Sets text to a light/off-white color (`#f8f9fa`). Similar to `text-white` but slightly softer. Used here on the dark footer background for comfortable readability.
+
+> 📌 **First Time Seeing `text-decoration-none`?** Removes the default underline from `<a>` links. Links in navbars and footers look cleaner without underlines — users already know they're clickable from context.
+
 📌 **`<small>`** — Renders text in a smaller font size. Perfect for copyright notices, disclaimers, and fine print. It's semantic — it tells the browser this text is secondary/supplementary.
 
 📌 **`<hr class="border-secondary">`** — A horizontal rule (divider line). We style it with `border-secondary` to make it subtle on the dark background.
@@ -751,6 +823,10 @@ Place this just before the footer (or just before the `</body>` close):
 
 📌 **`aria-live="assertive"`** — Accessibility attribute. Tells screen readers to immediately announce this toast when it appears. `"assertive"` means interrupt whatever is being read; `"polite"` would wait.
 
+> 📌 **First Time Seeing `aria-atomic`?** When set to `"true"`, tells screen readers to read the **entire** element as a whole whenever any part of it changes — not just the changed part. Ensures the full toast message is announced together.
+
+> 📌 **First Time Seeing `bg-primary`?** Applies Bootstrap's primary blue background color. Works just like `bg-dark` or `bg-light` but with the theme's primary color. Pair with `text-white` for readable text on the blue background.
+
 ---
 
 ### Step 7: Add Color Change Demo Button
@@ -777,6 +853,8 @@ Place this in a small section before the footer (after admin messages):
     </div>
 </section>
 ```
+
+> 📌 **First Time Seeing `btn-warning`?** A yellow/amber button — Bootstrap's "warning" color. Draws attention without alarm (unlike `btn-danger` red). Perfect here for "Start" because it says "try this" rather than "danger."
 
 ---
 
@@ -1037,6 +1115,100 @@ Before moving on, verify that everything works:
 | `justify-content-center` | Layout | Centers flex items horizontally |
 | `mt-5`, `pt-5`, `pb-3` | Spacing | Margin-top, padding-top/bottom |
 | `g-4` | Grid | Gap between grid columns |
+| `text-white` | Color | White text — readable on dark backgrounds |
+| `text-light` | Color | Light/off-white text — softer than pure white |
+| `bg-success` | Background | Green background (success semantic) |
+| `bg-primary` | Background | Primary blue background |
+| `btn-dark` | Button | Dark/black-themed button |
+| `btn-warning` | Button | Warning/yellow button |
+| `me-auto` | Spacing | Auto margin-end — pushes siblings to the right |
+| `text-decoration-none` | Typography | Removes underline from links |
+| `gap-md-4` | Spacing | Gap of size 4, applies on ≥768px screens only |
+| `p-3` | Spacing | Padding on all four sides, size 3 (from Session 2) |
+| `btn` | Button | Base button class — required on all buttons (from Session 2) |
+| `btn-close` | Button | Bootstrap close/dismiss button (from Session 7) |
+| `align-items-center` | Layout | Vertically centers flex items (from Session 10) |
+| `btn-sm` | Button | Small-sized button (from Session 5) |
+| `py-4` | Spacing | Vertical padding size 4 (from Session 2) |
+| `bg-light` | Background | Light grey background (from Session 3) |
+| `container` | Layout | Centered, max-width content wrapper (from Session 1) |
+| `text-center` | Typography | Centers text horizontally (from Session 3) |
+| `mb-3`, `mb-2`, `mb-1` | Spacing | Bottom margin sizes 3, 2, 1 (from Session 5) |
+| `text-muted` | Color | Muted grey text (from Session 3) |
+| `bg-dark` | Background | Dark/black background (from Session 1) |
+| `row` | Grid | Bootstrap grid row (from Session 3) |
+| `col-md-4` | Grid | 4-column width on medium screens (from Session 3) |
+| `my-3`, `mt-3`, `mt-2` | Spacing | Vertical/top margin sizes (from Session 4) |
+| `text-danger` | Color | Red text — danger/error semantic (from Session 9) |
+| `me-2` | Spacing | End (right) margin size 2 (from Session 1) |
+| `ms-2` | Spacing | Start (left) margin size 2 (from Session 1) |
+| `btn-lg` | Button | Large-sized button (from Session 2) |
+| `btn-outline-secondary` | Button | Bordered secondary/grey button (from Session 5) |
+| `btn-primary` | Button | Primary blue button (from Session 2) |
+
+### HTML Tags Used Today
+
+| Tag | Type | What It Does |
+|-----|------|-------------|
+| `<footer>` | Semantic | Page footer landmark — copyright, contact info |
+| `<small>` | Inline | Renders text in a smaller font; marks secondary content |
+| `<time>` | Inline | Semantic date/time element — `datetime` attr for machines |
+| `<hr>` | Block | Horizontal rule/divider line |
+| `<i>` | Inline | Icon element (Bootstrap Icons via class `bi bi-*`) |
+| `<strong>` | Inline | Bold text with semantic importance (screen readers emphasize it) |
+| `<span>` | Inline | Generic inline container — no visual effect until styled |
+| `<link>` | Void | Loads external resources (CSS, icon fonts) in `<head>` (from Session 1) |
+| `<head>` | Structural | Document metadata container (from Session 1) |
+| `<style>` | Metadata | Embeds internal CSS rules within HTML (from Session 3) |
+| `<section>` | Semantic | Groups related content with a heading (from Session 3) |
+| `<div>` | Block | Generic block container (from Session 1) |
+| `<button>` | Interactive | Clickable button element (from Session 4) |
+| `<h3>`, `<h4>`, `<h5>` | Block | Heading levels 3–5 (from Session 1) |
+| `<p>` | Block | Paragraph of text (from Session 1) |
+| `<ul>`, `<li>` | Block | Unordered list and list item (from Session 3) |
+| `<a>` | Inline | Anchor/hyperlink (from Session 1) |
+
+### HTML Attributes Used Today
+
+| Attribute | Used On | What It Does |
+|-----------|---------|-------------|
+| `aria-live` | Toast `<div>` | Tells screen readers when/how to announce dynamic content |
+| `aria-atomic` | Toast `<div>` | When `"true"`, screen reader reads entire element on any change |
+| `role="alert"` | Toast `<div>` | Marks element as an important notification for accessibility |
+| `data-bs-dismiss` | Close `<button>` | Bootstrap auto-hides the parent component on click |
+| `data-bs-toggle` | Any element | Activates a Bootstrap JS component (tooltip, modal, etc.) |
+| `title` | Tooltip trigger | Text shown in the tooltip popup on hover |
+| `datetime` | `<time>` | Machine-readable date/time in ISO 8601 format |
+| `onclick` | `<button>` | Runs JavaScript function when element is clicked |
+| `rel` | `<link>` | Relationship type — `"stylesheet"` loads CSS (from Session 1) |
+| `href` | `<link>`, `<a>` | URL of linked resource or navigation target (from Session 1) |
+| `type` | `<button>` | Specifies button type — `"button"` prevents form submit (from Session 4) |
+| `id` | Any element | Unique identifier for targeting with CSS/JavaScript (from Session 1) |
+| `class` | Any element | Assigns one or more CSS/Bootstrap class names (from Session 1) |
+| `style` | Any element | Inline CSS styles applied directly to the element (from Session 1) |
+
+### CSS Properties Used Today
+
+| Property | Example Value | What It Does |
+|----------|--------------|-------------|
+| `transition` | `background-color 0.3s ease` | Smoothly animates property changes over time |
+| `box-shadow` | `0 2px 8px rgba(0,0,0,0.3)` | Adds shadow around element for depth effect |
+| `border-radius` | `50%` | Rounds element corners (50% = circle) |
+| `font-weight` | `700` | Controls text boldness (100–900 scale) |
+| `text-transform` | `uppercase` | Changes text capitalization (uppercase/lowercase/capitalize) |
+| `letter-spacing` | `1px` | Adds space between individual characters |
+| `z-index` | `1080` | Controls stacking order — higher values appear on top |
+| `background-color` | `#1a1a2e` | Sets element background color |
+| `color` | `#e0e0e0` | Sets text color |
+| `border-color` | `#1a3a6b` | Sets border color on all sides |
+| `border-top` | `1px solid #1a3a6b` | Sets top border (width, style, color) |
+| `position` | `fixed` | Positions element relative to viewport (stays on scroll) |
+| `display` | `none` | Controls visibility — `none` hides, `block`/`inline-block` shows |
+| `width` | `45px` | Sets element width (from previous sessions) |
+| `height` | `45px` | Sets element height (from previous sessions) |
+| `font-size` | `1.2rem` | Sets text/icon size — `rem` is relative to root font size (from previous sessions) |
+| `bottom` | `30px` | Distance from the bottom edge when positioned (from previous sessions) |
+| `right` | `30px` | Distance from the right edge when positioned (from previous sessions) |
 
 ### JavaScript Concepts Used Today
 
