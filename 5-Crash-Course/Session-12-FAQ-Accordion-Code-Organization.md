@@ -38,6 +38,7 @@ our-class-website/
 | `.accordion` | Collapsible content panels | 📋 FAQ board at a railway station — tap a question, answer slides open |
 | `.accordion-item` | One question–answer pair | One row on the FAQ board |
 | `data-bs-parent` | Only one item open at a time | Like train berths — fold one down, others fold up |
+| `.collapsed` | Styles the button when its panel is hidden | The "closed" sign on a shop shutter — removed when it opens |
 | `<details>` + `<summary>` | Native HTML accordion | Browser's built-in FAQ — no CSS needed |
 | `<script src="...">` | Links external JS file | Plugging in an external hard drive |
 | `DOMContentLoaded` | Waits for HTML before running JS | Waiting for the building before opening the door |
@@ -620,6 +621,8 @@ Add this **before the footer** in `index.html`:
 </section>
 ```
 
+> 📌 **First Time Seeing `collapsed`?** Look at FAQ 2–10: their buttons have `class="accordion-button collapsed"`. The `collapsed` class tells Bootstrap to show the arrow pointing **down** (closed state). FAQ 1's button does NOT have it — because its panel starts **open** (`.show`). Bootstrap adds and removes `collapsed` automatically when you click, so you only set the initial state in HTML.
+
 📌 **Notice the pattern:** Every item has the same structure — only `id`, `data-bs-target`, and content change. Copy-paste the first item and edit — that's how real developers do it!
 
 ### Step 2: Add a Navbar Link
@@ -723,6 +726,74 @@ document.querySelectorAll('.btn').forEach((btn) => {     // DOM forEach
     btn.addEventListener('click', () => { /* ... */ });
 });
 ```
+
+### HTML Tags
+
+| Tag | Type | What It Does |
+|-----|------|-------------|
+| `<section>` | Semantic Block | Groups related page content with a thematic meaning (from Session 2) |
+| `<div>` | Generic Container | Groups elements together for layout or styling (from Session 1) |
+| `<h2>` | Heading | Second-level heading — used here for accordion headers (from Session 2) |
+| `<p>` | Paragraph | A block of text content (from Session 1) |
+| `<button>` | Interactive Element | Clickable button that triggers an action (from Session 1) |
+| `<a>` | Hyperlink | Creates a clickable link to a URL or page section (from Session 1) |
+| `<li>` | List Item | One item inside a list — used here inside navbar (from Session 1) |
+| `<strong>` | Inline Text | Makes text bold / marks it as important (from Session 3) |
+| `<em>` | Inline Text | Makes text italic / marks it as emphasized (from Session 3) |
+| `<details>` | Disclosure | Native HTML accordion container — no JS needed (Session 12) |
+| `<summary>` | Disclosure | Visible clickable label inside `<details>` (Session 12) |
+| `<script>` | Scripting | Embeds inline JS or links an external `.js` file via `src` (Session 12) |
+| `<body>` | Content Container | Holds all visible page content (from Session 1) |
+| `<html>` | Root Element | Outermost container of the entire page (from Session 1) |
+
+### Bootstrap Classes
+
+| Class | Type | What It Does |
+|-------|------|-------------|
+| `accordion` | Component | Outer wrapper for the accordion component (Session 12) |
+| `accordion-item` | Component | One collapsible question–answer section (Session 12) |
+| `accordion-header` | Component | Header area containing the toggle button (Session 12) |
+| `accordion-button` | Component | Clickable button that expands/collapses a panel (Session 12) |
+| `accordion-collapse` | Component | The collapsible answer panel wrapper (Session 12) |
+| `accordion-body` | Component | Content area inside each accordion panel (Session 12) |
+| `collapsed` | State | Styles the button when its panel is hidden — rotates the arrow down (Session 12) |
+| `collapse` | Behavior | Makes an element collapsible — hidden by default until toggled (from Session 1) |
+| `show` | State | Makes a collapsed/hidden element visible on page load (from Session 2) |
+| `container` | Layout | Centers and constrains content to a max width (from Session 1) |
+| `row` | Grid | Creates a horizontal group of columns (from Session 1) |
+| `col-lg-8` | Grid | 8/12-width column on large (≥992px) screens (from Session 3) |
+| `justify-content-center` | Flex | Centers columns horizontally inside a row (from Session 4) |
+| `py-5` | Spacing | Adds large vertical (top + bottom) padding (from Session 2) |
+| `mb-4` | Spacing | Adds medium bottom margin (from Session 3) |
+| `mb-5` | Spacing | Adds large bottom margin (from Session 3) |
+| `bg-light` | Background | Light grey background color (#f8f9fa) (from Session 1) |
+| `text-center` | Typography | Centers text horizontally (from Session 1) |
+| `text-muted` | Typography | Makes text subtle grey (#6c757d) (from Session 1) |
+| `nav-item` | Component | Marks a `<li>` as a navigation item (from Session 1) |
+| `nav-link` | Component | Styles an `<a>` as a navigation link (from Session 1) |
+| `navbar-nav` | Component | Container for nav items inside a navbar (from Session 1) |
+| `navbar-collapse` | Component | Collapsible area of the navbar on mobile (from Session 1) |
+| `btn` | Component | Base Bootstrap button styling (from Session 1) |
+
+### HTML Attributes
+
+| Attribute | Used On | What It Does |
+|-----------|---------|-------------|
+| `data-bs-toggle="collapse"` | `<button>` | Tells Bootstrap to toggle a collapsible panel on click (from Session 1) |
+| `data-bs-target` | `<button>` | Points to the panel to toggle, by `#id` selector (from Session 1) |
+| `data-bs-parent` | `.accordion-collapse` | Limits the accordion to one open panel at a time (Session 12) |
+| `id` | Various | Unique identifier — wires `data-bs-target="#faq1"` to the matching panel (from Session 1) |
+| `class` | Various | Assigns one or more CSS/Bootstrap classes for styling (from Session 1) |
+| `type="button"` | `<button>` | Prevents the button from submitting a form (from Session 1) |
+| `href` | `<a>` | The destination URL or `#anchor` for in-page navigation (from Session 1) |
+| `target="_blank"` | `<a>` | Opens the linked page in a new browser tab (from Session 1) |
+| `src` | `<script>` | Path to the external JavaScript file (Session 12) |
+
+### CSS Properties (via JavaScript)
+
+| Property | Used In | What It Does |
+|----------|---------|-------------|
+| `display` | `element.style.display` | Controls visibility — `'block'` (visible), `'none'` (hidden), `''` (default) (from Session 4) |
 
 ---
 
