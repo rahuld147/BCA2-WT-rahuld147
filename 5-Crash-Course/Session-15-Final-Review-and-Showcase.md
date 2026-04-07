@@ -559,6 +559,82 @@ Here is the complete mapping of all **30 lab experiments** from the official BCA
 
 ---
 
+## 📋 Quick Reference — All Tags from This Course
+
+> All HTML tags below were introduced in Sessions 1–14 and are listed here as a comprehensive study reference. The fenced code block in Part 2 enumerates every tag used across the course; this table provides the "What It Does" explanation for each.
+
+### HTML Tags
+
+| Tag | Type | What It Does |
+|-----|------|-------------|
+| `<!DOCTYPE>` | Declaration | Tells the browser this is an HTML5 document (from Session 1) |
+| `<html>` | Root | Root element wrapping the entire page (from Session 1) |
+| `<head>` | Metadata | Container for page metadata, title, and linked resources (from Session 1) |
+| `<body>` | Content | Contains all visible page content (from Session 1) |
+| `<main>` | Semantic | Wraps the primary content area of the page (from Session 1) |
+| `<section>` | Semantic | Groups related content under a common theme (from Session 2) |
+| `<article>` | Semantic | Self-contained content like a card or blog post (from Session 3) |
+| `<aside>` | Semantic | Supplementary content such as a sidebar (from Session 14) |
+| `<footer>` | Semantic | Page footer for copyright and contact links (from Session 11) |
+| `<header>` | Semantic | Introductory content or top-of-page wrapper (from Session 1) |
+| `<h1>`–`<h6>` | Heading | Section headings; `<h1>` is most important, `<h6>` least (from Session 2) |
+| `<p>` | Block | A paragraph of text (from Session 2) |
+| `<span>` | Inline | Inline container for styling a portion of text (from Session 5) |
+| `<strong>` | Inline | Bold text indicating strong importance (from Session 2) |
+| `<em>` | Inline | Italic text indicating emphasis (from Session 2) |
+| `<small>` | Inline | Smaller text for fine print or side comments (from Session 5) |
+| `<br>` | Void | Inserts a line break within text (from Session 2) |
+| `<hr>` | Void | Horizontal rule — a thematic break between sections (from Session 2) |
+| `<ul>` | List | Unordered (bulleted) list container (from Session 1) |
+| `<ol>` | List | Ordered (numbered) list container (from Session 3) |
+| `<li>` | List Item | A single item inside `<ul>` or `<ol>` (from Session 1) |
+| `<dl>` | Definition List | Definition list for term–description pairs (from Session 3) |
+| `<dt>` | Definition Term | The term being defined inside a `<dl>` (from Session 3) |
+| `<dd>` | Definition Desc | The description for the term inside a `<dl>` (from Session 3) |
+| `<a>` | Inline | Hyperlink to another page, section, or URL (from Session 1) |
+| `<nav>` | Semantic | Groups navigation links together (from Session 1) |
+| `<img>` | Void | Embeds an image; requires `src` and `alt` attributes (from Session 2) |
+| `<figure>` | Semantic | Groups media content with an optional caption (from Session 3) |
+| `<figcaption>` | Semantic | Caption text inside a `<figure>` element (from Session 7) |
+| `<video>` | Media | Embeds a video player with playback controls (from Session 7) |
+| `<audio>` | Media | Embeds an audio player (from Session 7) |
+| `<table>` | Table | Creates a data table (from Session 6) |
+| `<thead>` | Table | Groups header rows at the top of a table (from Session 6) |
+| `<tbody>` | Table | Groups body rows in a table (from Session 6) |
+| `<tr>` | Table | A single row inside a table (from Session 6) |
+| `<th>` | Table | Header cell — bold and centered by default (from Session 6) |
+| `<td>` | Table | Standard data cell in a table row (from Session 6) |
+| `<form>` | Form | Container for user input fields and controls (from Session 8) |
+| `<input>` | Form | Single-line input — text, checkbox, radio, etc. (from Session 8) |
+| `<label>` | Form | Descriptive label tied to a form control (from Session 8) |
+| `<select>` | Form | Dropdown selection menu (from Session 8) |
+| `<option>` | Form | A single choice inside a `<select>` dropdown (from Session 8) |
+| `<textarea>` | Form | Multi-line text input area (from Session 8) |
+| `<button>` | Form | Clickable button for form actions or JavaScript triggers (from Session 8) |
+| `<details>` | Interactive | Expandable/collapsible disclosure widget (from Session 12) |
+| `<summary>` | Interactive | Visible toggle heading for a `<details>` block (from Session 12) |
+| `<time>` | Inline | Machine-readable date or time value (from Session 11) |
+| `<mark>` | Inline | Highlighted/marked text for visual emphasis (covered in course) |
+| `<meta>` | Metadata | Page metadata — charset, viewport, description (from Session 1) |
+| `<title>` | Metadata | Page title shown in the browser tab (from Session 1) |
+| `<link>` | Metadata | Links external resources like CSS stylesheets (from Session 1) |
+| `<script>` | Metadata | Embeds or links JavaScript code (from Session 4) |
+| `<div>` | Block | Generic block-level container for grouping content (from Session 5) |
+
+### Bootstrap Classes
+
+> No Bootstrap classes appear inside fenced code blocks in this review session. All Bootstrap classes referenced throughout the document are listed in the [Bootstrap Components Mastered](#-bootstrap-components-mastered) table in Part 2.
+
+### HTML Attributes
+
+> No HTML attributes appear inside fenced code blocks in this review session. See individual session files (Sessions 1–14) for detailed attribute references.
+
+### CSS Properties
+
+> No CSS properties appear inside fenced code blocks in this review session. See [Session 13 — Custom CSS + Polish](Session-13-Custom-CSS-Polish.md) for CSS property coverage.
+
+---
+
 ## 🎊 Final Words
 
 ```
