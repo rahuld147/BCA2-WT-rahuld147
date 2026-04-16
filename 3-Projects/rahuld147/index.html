@@ -8,38 +8,48 @@
 </head>
 <body>
     <!-- Navbar Starts -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <!-- content of navbar goes here -->
         <div class="container">
-            <a class="navbar-brand fw-bold" href="#">
-                <i class="bi bi-mortatboard-fill me-2">BCA 2025-26</i>
-            </a>
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <a href="#" class="navbar-brand">BCA 2025-26</a>
+            <button class="navbar-toggler">
+                <span class="navbar-toggle-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <!-- Navigation links will be placed -->
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
+                        <a href="#home" aria-current="page" class="nav-link">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a href="#about" class="nav-link">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Faculty</a>
+                        <a href="#faculty" class="nav-link">Faculty</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Time Table</a>
+                        <a href="#Timetable" class="nav-link">Timetable</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Gallery</a>
+                        <a href="#gallery" class="nav-link">Gallery</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a href="#contact" class="nav-link">Contact</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">FAQ</a>
+                        <a href="#faq" class="nav-link">FAQ</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" role="button" aria-expanded="false" href="#" data-bs-toggle="dropdown">Resources</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li class="dropdown-item" href="#">Syllabus PDF</li>
+                            <li class="dropdown-item" href="#">Previous Year Result</li>
+                            <li class="dropdown-item" href="#">Study Material</li>
+                            <li class="dropdown-item" href="#">University Portal</li>
+                        </ul>
                     </li>
                 </ul>
             </div>
-            
-            
         </div>
     </nav>
     <!-- Navbar Ends -->
